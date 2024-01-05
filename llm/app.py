@@ -1,6 +1,6 @@
 from langchain_community.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
+# from langchain_core.output_parsers import StrOutputParser
 """from langchain_community.document_loaders import WebBaseLoader
 from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_community.vectorstores import DocArrayInMemorySearch
@@ -8,14 +8,11 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.documents import Document
 from langchain.chains import create_retrieval_chain"""
-from langchain_community.chat_models import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate
 from langchain.schema import StrOutputParser
 # from langchain_core.runnables import RunnablePassthrough
 import os
 
 def main():
-    # if 'OPENAI_API_KEY' not in os.environ: exit()
     if 'OPENAI_API_KEY' not in os.environ:
         print('Please, set OPENAI_API_KEY environment variable:\nexport OPENAI_API_KEY="..."')
         exit()
